@@ -40,7 +40,7 @@ class LabelFilter:
 
     def filter(self, label):
         if self.normalize:
-            label = unicodedata.normalize("NFKC", label.strip()).encode("ascii", "ignore").decode("ascii", "ignore")
+            label = unicodedata.normalize("NFKD", label.strip()).encode("ascii", "ignore").decode("ascii", "ignore")
         label = self.validate_fun(label)
         if self.alphabet and label and not self.alphabet.CanEncode(label):
             label = None
