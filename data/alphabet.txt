@@ -1,16 +1,22 @@
 #   This Config File is Auto Generated with Info below:
-#  [Total Characters Count] 	1766724
-#   [Total Alphabet Count]  	2530
-#   [Valid Alphabet Count]  	2530
+#  [Total Characters Count] 	1783938
+#   [Total Alphabet Count]  	2541
+#   [Valid Alphabet Count]  	2541
 #      [--exclude_chars]     	""
 #      [--include_chars]     	""
 #      [--no_normalize]     	True
-#   [--include_punctuation]  	False
+#   [--include_punctuation]  	True
 e
 g
 l
 o
 q
+、
+。
+《
+》
+「
+」
 ㄟ
 一
 丁
@@ -2528,6 +2534,10 @@ q
 龍
 龐
 龜
+！
+，
+：
+？
 ａ
 ｂ
 ｆ
@@ -2536,4 +2546,5 @@ q
 ｎ
 ｐ
 ｔ
+～
 # end of the file
