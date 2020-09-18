@@ -23,8 +23,7 @@ tfv1.logging.set_verbosity({
     '2': tfv1.logging.WARN,
     '3': tfv1.logging.ERROR
 }.get(DESIRED_LOG_LEVEL))
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
+
 from datetime import datetime
 from ds_ctcdecoder import ctc_beam_search_decoder, Scorer
 from .evaluate import evaluate
