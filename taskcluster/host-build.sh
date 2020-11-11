@@ -32,4 +32,3 @@ else
 fi
 
 do_deepspeech_nodejs_build
-

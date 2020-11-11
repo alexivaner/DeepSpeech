@@ -100,6 +100,7 @@ cc_library(
     includes = [
         ".",
         "ctcdecode/third_party/ThreadPool",
+        "ctcdecode/third_party/object_pool",
     ] + OPENFST_INCLUDES_PLATFORM,
     deps = [":kenlm"],
     linkopts = [
@@ -224,11 +225,16 @@ cc_binary(
         "@com_google_absl//absl/types:optional",
         "@boost//:program_options",
     ],
+    linkstatic = 1,
     linkopts = [
         "-lm",
         "-ldl",
         "-pthread",
-    ],
+    ] + select({
+        # ARMv7: error: Android 5.0 and later only support position-independent executables (-fPIE).
+        "//tensorflow:android": ["-fPIE -pie"],
+        "//conditions:default": [],
+    }),
 )
 
 cc_binary(
